@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Guessing : MonoBehaviour {
 
-	int max = 100;
-		int min = 1;
-	int guess = 50;
+	private int max = 100;
+	private int min = 1;
+	private int guess;
 
+	public int counter;
 
 	// Use this for initialization
 	void Start () 
 	{
+		guess = Random.Range (min,max);
 		print ("Welcome to Number Guesser");
 		print ("Pick a number in your head");
 
@@ -24,18 +26,30 @@ public class Guessing : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+
+
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.UpArrow))
+
+		if (counter == -1) {
+			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) {
+				//counter--;
+				print ("You win!");
+			}
+
+		}
+		else if (Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			min = guess;
 			guess = (max + min) / 2;
+			counter--;
 			print ("Is the number higher or lower than " + guess);
 		}
-		if (Input.GetKeyDown (KeyCode.DownArrow))
+		else if (Input.GetKeyDown (KeyCode.DownArrow))
 		{
 			max = guess;
 			guess = (max + min) / 2;
+			counter--;
 			print ("Is the number higher or lower than " + guess);
 		}
 		if (Input.GetKeyDown (KeyCode.Return))
@@ -43,6 +57,9 @@ public class Guessing : MonoBehaviour {
 			print ("I win");
 		}
 
+		if (counter == 0) 
+		{
+			counter--;
+		}
 	}
-}
-	
+}	
