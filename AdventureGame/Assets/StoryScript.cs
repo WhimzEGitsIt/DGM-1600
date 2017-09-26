@@ -10,6 +10,9 @@ public class StoryScript : MonoBehaviour {
 	public enum States {start, chest, bed, campfire, tent_wall };
 	public States myState; 
 
+	public bool knife = false;
+	public bool rope = false;
+	public bool mask = false;
 
 	void Start () {
 		myState = States.start;
@@ -44,11 +47,37 @@ public class StoryScript : MonoBehaviour {
 	}
 
 	void State_campfire (){
-		textObject.text = "Campfire State";
+		textObject.text = "As you step out of your tent, a campfire sits in front of you. Your clan mates are dead on the ground." +
+			"\nTo your east is your clan leaders tent, the door has been ripped off." +
+			"\nTo your north is a hostile area" +
+			"\nTo your south you see the rival gang riding away in the distant" +
+			"\n\nPress E to go east. Press N to go north. Press S to go south.";
 	}
 
 
 	void State_chest (){
-		textObject.text = "Chest State";
-	}
+		if (knife == true) {
+			textObject.text = "Chest contents:" +
+				"\nA rope." +
+				"\nA mask." +
+				"\n\nYou have taken the hunting knife. To take the rope, press R. To take the mask, press M. To leave chest, press S.";
+		} else { 
+			textObject.text = "Chest contents:" +
+			"\nA hunting knife." +
+			"\nA rope." +
+			"\nA mask." +
+			"\n\n To take the knife, press K. To take the rope, press R. To take the mask, press M. To leave chest, press S.";
+		}
+		if (Input.GetKeyDown (KeyCode.K)) {
+			knife = true;
+		} else if (Input.GetKeyDown (KeyCode.R)) {
+			rope = true;
+		} else if (Input.GetKeyDown (KeyCode.M)) {
+			mask = true;
+		} else if (Input.GetKeyDown (KeyCode.S)) {
+			myState = States.start;
+		}
+
+}
+
 }
