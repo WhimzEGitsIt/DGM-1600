@@ -7,13 +7,15 @@ public class StoryScript : MonoBehaviour {
 
 	public Text textObject; 
 
-	public enum States {start, chest, bed, campfire, tent_wall, kill_looter, sneak_1, campfire_1, loot_looter, campfire_exit};
+	public enum States {start, chest, bed, campfire, tent_wall, kill_looter, sneak_1, campfire_1, loot_looter, campfire_exit, frozen_wasteland};
 	public States myState; 
 
 	public bool knife = false;
 	public bool rope = false;
 	public bool mask = false;
 	public bool blanket = false;
+	public bool note = false;
+
 	void Start () {
 		myState = States.start;
 
@@ -23,6 +25,7 @@ public class StoryScript : MonoBehaviour {
 		knife = false;
 		rope = false;
 		mask = false;
+		blanket = false;
 
 		myState = States.start;
 	}
@@ -40,8 +43,17 @@ public class StoryScript : MonoBehaviour {
 			State_campfire_1 ();
 		} else if (myState == States.bed) {
 			State_bed ();
+		} else if (myState == States.tent_wall) {
+			State_tent_wall ();
+		} else if (myState == States.frozen_wasteland) {
+			State_frozen_wasteland ();
+		} else if (myState == States.sneak_1) {
+			State_sneak_1 ();
+		} else if (myState == States.loot_looter) {
+			State_loot_looter ();
 		}
 
+	
 
 	}
 
@@ -143,10 +155,43 @@ public class StoryScript : MonoBehaviour {
 
 	}
 
+	void State_tent_wall () {
+		if (knife == true) {
+			textObject.text = "The back wall of your tent." +
+			"\n\nTo use your knife to cut the wall press C." +
+			"\nTo go back, press B.";
+		} else {
+			textObject.text = "The back wall of your tent." +
+				"\nPerhaps something sharp could cut a hole in the material." +
+				"\n\nTo go back, press B.";
+		} if (Input.GetKeyDown (KeyCode.C)) {
+			myState = States.frozen_wasteland;
+		} else if (Input.GetKeyDown (KeyCode.B)) {
+			myState = States.start;
+		}
+	}
+
+	void State_frozen_wasteland () {
+		if (blanket == true) {
+			textObject.text = "You cut a hole in the tent and escape out the back. Running away from your camp you encounter a frozen wasteland." +
+			"\nYour blanket keeps you warm for a while, but as you freeze slowly you regret not avenging your clanmates." +
+			"\n\nYou have died." +
+			"\nPress S to start over.";
+		} else {
+			textObject.text = "You cut a hole in the tent and escape out the back. Running away from your camp you encounter a frozen wasteland." +
+			"\nYou are unprepared for the harsh environment, and freeze to death." +
+			"\n\nPress S to start over.";
+		} if (Input.GetKeyDown (KeyCode.S)) {
+			Reset ();
+		}
+	}
+
+
 	void State_kill_looter (){
 		if (knife == true) {
 			textObject.text = "You slowly approach the man, and draw your knife. Quickly stepping forward, you slice his neck and let his body fall to the ground." +
-			"\n\nPress C to continue.";
+			"\nYou avenged your fallen clanmates and have won the game!" +
+			"\n\nIf you wish to continue the game, press C.";
 		} else {
 			textObject.text = "As you approach the man, you realize you forgot your weapon and he turns on you. Before you know it, he has drawn his sword and stabbed you through the heart." +
 			"\n\nYou have died." +
@@ -159,17 +204,49 @@ public class StoryScript : MonoBehaviour {
 			}
 		}
 
+	void State_sneak_1 () {
+		textObject.text = "Walking as quiet as you can, you attempt to sneak away from the looter, but accidently snap a twig." +
+		"\nThe looter whips around, drawing his sword in the same motion and guts you like a fish." +
+		"\nYou have died." +
+		"\n\nPress S to start over.";
+		if (Input.GetKeyDown (KeyCode.S)) {
+			Reset ();
+		}
+	}
 		
 	void State_campfire_1 () {
-		textObject.text = "A campfire sits in front of you. Your clan mates are dead on the ground, the looter you killed lay at your feet." +
+		if (note == true) {
+			textObject.text = "A campfire sits in front of you. Your clan mates are dead on the ground, the looter you killed lay at your feet." +
+				"\n\nYou have searched the looter." +
+				"\nTo leave the camp, press L";
+		} else {
+			textObject.text = "A campfire sits in front of you. Your clan mates are dead on the ground, the looter you killed lay at your feet." +
 			"\n\nTo search looter, press S" +
 			"\nTo leave the camp, press L";
-		if (Input.GetKeyDown (KeyCode.S)) {
+		} if (Input.GetKeyDown (KeyCode.S)) {
 			myState = States.loot_looter;
 		} else if (Input.GetKeyDown (KeyCode.L)) {
 			myState = States.campfire_exit;
 		}
 	}
 
+	void State_loot_looter () {
+		if (note == true) {
+			textObject.text = "You have taken the note from the body." +
+			"\nIt reads: " +
+			"\nUu'ghar, after you and your group of men kill and raid the camp, meet back at the Black Skeleton Fortress. It is about a days ride south of their current camp." +
+			"\n\nTo continue, press C.";
+		} else {
+			textObject.text = "You crouch down and check the body, and find a note." +
+				"\nTo take and read the note, press R." +
+				"\n\nTo go back, press B.";
+		} if (Input.GetKeyDown (KeyCode.R)) {
+			note = true;
+		} else if (Input.GetKeyDown (KeyCode.B)) {
+			myState = States.campfire_1;
+		} else if (Input.GetKeyDown (KeyCode.C)) {
+			myState = States.campfire_1;
+		}
+	}
 
 }
