@@ -5,17 +5,12 @@ using UnityEngine;
 public class Paddle : MonoBehaviour {
 
 	public float paddleSpeed = 10f;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		//transform.Translate (paddleSpeed * Time.deltaTime * Input.GetAxis ("Horizontal"), 0, 0);
 		float xPos = transform.position.x + (Input.GetAxis ("Horizontal") * paddleSpeed);
 		var pos = transform.position;
-		pos.x = Mathf.Clamp (xPos, -13.5f, 13.5f);
+		pos.x = Mathf.Clamp (xPos, -14.25f, 14.25f);
 		transform.position = pos;
 	}
 
@@ -24,7 +19,7 @@ public class Paddle : MonoBehaviour {
 			if (contact.thisCollider == GetComponent<BoxCollider>()) {
 				float calc = contact.point.x - transform.position.x;
 
-				contact.otherCollider.GetComponent<Rigidbody> ().AddForce (400f * calc, 0, 0);
+				contact.otherCollider.GetComponent<Rigidbody> ().AddForce (200f * calc, 0, 0);
 			}
 		}
 	}

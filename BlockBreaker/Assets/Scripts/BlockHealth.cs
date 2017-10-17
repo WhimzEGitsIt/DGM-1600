@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class BlockHealth : MonoBehaviour {
 
-	public const int maxHealth = 1;
-	public int currentHealth =maxHealth;
+	public int health;
 
-	public void TakeDamage (int amount) {
-		currentHealth -= amount;
-		if (currentHealth <= 0) 
-		{
-			currentHealth = 0;
-			print ("Dead");
+	void OnCollisionEnter2D (Collision2D collider) {
+		health--;
+
+		if (health <= 0) {
+			Destroy (this.gameObject);
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
