@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour {
 
-	public float paddleSpeed = 10f;
+	public float paddleSpeed = 20f;
 
 	void Update () {
 		//transform.Translate (paddleSpeed * Time.deltaTime * Input.GetAxis ("Horizontal"), 0, 0);

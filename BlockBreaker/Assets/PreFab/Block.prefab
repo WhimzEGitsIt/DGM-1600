@@ -35,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215022898974846}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.11, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.00086398766, w: 0.99999964}
+  m_LocalPosition: {x: 3, y: 3.45, z: 0}
   m_LocalScale: {x: 4.7454004, y: 4.214916, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.09900001}
 --- !u!61 &61540469561958104
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -78,7 +78,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fbf08061564491b829487afce9eeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 3
+  picture:
+  - {fileID: 21300000, guid: 2fb84ed84475d47b9b0a4da9cbe75704, type: 3}
+  - {fileID: 21300000, guid: 58fbfb7a6335343ed8ec731bd3d6d0d8, type: 3}
+  - {fileID: 21300000, guid: 00f5365d2c77a4197969d3a523e130f1, type: 3}
 --- !u!212 &212185731459021842
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,7 +116,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2fb84ed84475d47b9b0a4da9cbe75704, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8088235, g: 0.49956748, b: 0.64673066, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

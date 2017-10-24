@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour {
 
-	float BallForce = 200f;
-	// Use this for initialization
+	public GameObject Paddle;
+
+	private bool playing = false;
+	private Vector3 PaddleToBallVector; //Distance from ball to paddle
+	private Rigidbody2D rigid;
+
+
 	void Start () {
-		Rigidbody ballrig = GetComponent<Rigidbody> ();
-		ballrig.AddForce (0, BallForce, 0);
+		PaddleToBallVector = this.transform.position - Paddle.transform.position;
+		rigid = this.GetComponent<Rigidbody2D> ();
+		print (rigid);
 	}
-	
-	// Update is called once per frame
+
+
+
 	void Update () {
+
+
+		if (!playing) {
+			this.transform.position = Paddle.transform.position + PaddleToBallVector;
 		
+			if (Input.GetMouseButtonDown(0)){
+				rigid.velocity = new Vector2 (4, 20);
+				playing = true;
+			}
+		
+		
+		}
+
 	}
 }
