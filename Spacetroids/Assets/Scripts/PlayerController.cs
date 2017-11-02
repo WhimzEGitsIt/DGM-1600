@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float movementSpeed = 5.0f;
-	public float clockwise = 1000.0f;
-	public float counterClockwise = -1000.0f;
+	public float clockwise = 100.0f;
+	public float counterClockwise = -100.0f;
 
 	void Start () {
 		 
@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.E)) {
-			transform.Rotate (0, Time.deltaTime * clockwise, 0);
+			transform.Rotate (0, 0, Time.deltaTime * clockwise);
 		} else if (Input.GetKey (KeyCode.Q)) {
-			transform.Rotate (0, Time.deltaTime * counterClockwise, 0);
+			transform.Rotate (0, 0, Time.deltaTime * counterClockwise);
 		}
 	}
 
