@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Meteor.cs" />
      <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PowerUp.cs" />
      <None Include="Assets\SpaceShooterRedux\Spritesheet\sheet.xml" />
      <None Include="Assets\SpaceShooterRedux\license.txt" />
  <Reference Include="UnityEngine.Analytics">
