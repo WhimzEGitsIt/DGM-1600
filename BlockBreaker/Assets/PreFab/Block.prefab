@@ -78,10 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fbf08061564491b829487afce9eeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1
   picture:
   - {fileID: 21300000, guid: 2fb84ed84475d47b9b0a4da9cbe75704, type: 3}
-  - {fileID: 21300000, guid: 58fbfb7a6335343ed8ec731bd3d6d0d8, type: 3}
   - {fileID: 21300000, guid: 00f5365d2c77a4197969d3a523e130f1, type: 3}
 --- !u!212 &212185731459021842
 SpriteRenderer:
@@ -116,12 +115,10 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2fb84ed84475d47b9b0a4da9cbe75704, type: 3}
-  m_Color: {r: 0.8088235, g: 0.49956748, b: 0.64673066, a: 1}
+  m_Color: {r: 0.003921569, g: 0.45490196, b: 0.007843138, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
