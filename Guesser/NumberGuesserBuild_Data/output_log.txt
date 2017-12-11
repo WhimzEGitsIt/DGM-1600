@@ -1,0 +1,54 @@
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 5500 (ID=0x1616)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   20.19.15.4531
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.206 seconds
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\green\Desktop\DeskTop\GitKraken\DGM-1600\Guesser\NumberGuesserBuild_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 3286x1080 at -1920,-224
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.729284 ms
+Welcome to Number Guesser
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Pick a number in your head
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The highest number you can pick is 100
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The lowest number you can pick is 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Is the number higher or lower than 82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Up arrow for higher, Down for lower, Enter for equal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 27d8 -> priority: 1 
+  Thread -> id: 31ec -> priority: 1 
