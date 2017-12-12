@@ -1,0 +1,6 @@
+Variables represent a numeric or string value or an object of a class. The value the variable stores may change, but the name stays the same.
+5 difference types of variables are:
+Int, float, byte, short, string.
+
+int x = 1; // x holds the value of 1
+x = 2; // now x holds the value of 2
