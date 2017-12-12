@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour {
 	public GameObject projectile;
 	public Transform shotPos;
 
+	public int health;
+	private int count =0;
+	public LevelManager myLevelManager;
 
 	public float movementSpeed = 100.0f;
 	public float clockwise = 1.0f;
@@ -49,4 +52,14 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+	void OnCollisionEnter2D (Collision2D collider) {
+		health--;
+		count++;
+
+		if (health <= 0) {
+			Destroy (this.gameObject);
+			myLevelManager.LevelLoad ("GameOver");
+		
+		}
+	}
 }

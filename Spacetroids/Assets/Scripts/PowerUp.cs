@@ -30,7 +30,7 @@ public class PowerUp : MonoBehaviour {
 		switch (powerupType) {
 		case Type.speedBooster:
 			other.GetComponent<PlayerController>().movementSpeed *= 2;
-		default:
+
 			break;
 		}
 		Destroy (this.gameObject);

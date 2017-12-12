@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+	public static int meteorCount;
 
 	void Start(){
 		
@@ -27,5 +28,9 @@ public class LevelManager : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex +1);
 	}
 
-
+	public void CheckMeteorCount (){
+		if (meteorCount <= 0) {
+			LoadNextLevel ();
+		}
+	}
 }	
