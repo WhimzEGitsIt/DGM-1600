@@ -1,0 +1,33 @@
+If statements make logical tests, and need a boolean (true or false result) to be able to complete its function.
+They can be used for player input, or to tell the game to check certian factors in game, and the proceed to alter it as needed.
+
+1. if (mask == true && rope == true && knife == true) {
+	textObject.text = "Chest contents:" +
+	"\nThe chest is empty";
+	
+2. if (Input.GetKeyDown (KeyCode.K)) {
+			knife = true;
+3. if (myState == States.start) {
+			State_start ();.
+4. if (brickCount <= 0) {
+			LoadNextLevel ();
+5. if (lifetime <= 0) {
+	Destroy (this.gameObject);
+	}
+6. if (Input.GetKey (KeyCode.A)) {
+			transform.Rotate (0, 0, Time.deltaTime * clockwise);
+7. if (meteorCount <= 0) {
+			LoadNextLevel ();
+8. if (Input.GetButtonUp ("Fire1")) 
+		{
+			GameObject shot = Instantiate (projectile, shotPos.position, shotPos.rotation) as GameObject;
+			shot.GetComponent<Rigidbody2D> ().AddForce (shotPos.up * shotForce);
+			//shot.AddFroce(shotPos.forward * shotForce);
+		}
+9.  if(number > 10)
+                Console.WriteLine("Hey! The number should be 10 or less!");
+10. if(number < 0)
+                    Console.WriteLine("Hey! The number should be 0 or more!");
+
+
+
