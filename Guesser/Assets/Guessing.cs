@@ -51,6 +51,7 @@ public class Guessing : MonoBehaviour {
 	{
 
 		if (counter == -1) {
+			//tells game when the arrow keys are pressed down for input.
 			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) {
 				//counter--;
 				textBox.text = "You win!";
@@ -62,6 +63,7 @@ public class Guessing : MonoBehaviour {
 			min = guess;
 			guess = (max + min) / 2;
 			counter--;
+			//prints in game screen.
 			textBox.text = "Is the number higher or lower than " + guess
 				+ "\n Up arrow for higher, Down arrow for lower, Enter for equal";
 		}
