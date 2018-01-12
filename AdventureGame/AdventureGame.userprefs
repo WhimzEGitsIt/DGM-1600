@@ -1,8 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\StoryScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Spacetroids\Assets\Scripts\PlayerController.cs">
     <Files>
-      <File FileName="Assets\StoryScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\StoryScript.cs" Line="35" Column="19" />
+      <File FileName="..\Guesser\Assets\Guessing.cs" Line="1" Column="1" />
+      <File FileName="..\BlockBreaker\Assets\Scripts\LevelManager.cs" Line="35" Column="21" />
+      <File FileName="..\Spacetroids\Assets\Scripts\LazorScript.cs" Line="25" Column="4" />
+      <File FileName="..\BlockBreaker\Assets\Scripts\BlockHealth.cs" Line="1" Column="1" />
+      <File FileName="..\Spacetroids\Assets\Scripts\Meteor.cs" Line="1" Column="1" />
+      <File FileName="..\Spacetroids\Assets\Scripts\PlayerController.cs" Line="50" Column="4" />
+      <File FileName="..\Spacetroids\Assets\Scripts\PowerUp.cs" Line="1" Column="1" />
+      <File FileName="..\Spacetroids\Assets\Scripts\Follow.cs" Line="1" Column="1" />
+      <File FileName="..\Spacetroids\Assets\Scripts\LevelManager.cs" Line="33" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
